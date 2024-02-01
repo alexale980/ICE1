@@ -26,6 +26,7 @@ public class CardTrick {
         luckCard.setSuit("Clubs");
         magicHand[0] = luckCard; // Overwrite the first card with the luck card
 
+    
         // Fill magicHand with random Card objects (excluding the first card)
         for (int i = 1; i < magicHand.length; i++) {
             Card c = new Card();
@@ -33,6 +34,11 @@ public class CardTrick {
             c.setSuit(Card.SUITS[generateRandomSuitIndex()]);
             magicHand[i] = c;
         }
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);  
+        luckyCard.setSuit("Hearts");  
+        magicHand[6] = luckyCard; 
 
         // Ask the user for Card value and suit
         Scanner scanner = new Scanner(System.in);
