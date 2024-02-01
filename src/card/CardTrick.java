@@ -8,7 +8,7 @@ package card;
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
- * @author Kshitij Ale
+ * @author Kshitij Ale 991722551
  */
 
 
@@ -39,7 +39,7 @@ public class CardTrick {
         luckyCard.setValue(7);  
         luckyCard.setSuit("Hearts");  
         magicHand[6] = luckyCard; 
-
+       
         // Ask the user for Card value and suit
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your card value (1-13): ");
@@ -77,7 +77,8 @@ public class CardTrick {
 
     // Helper method to generate a random suit index (0-3)
     private static int generateRandomSuitIndex() {
-        Random random = new Random();
-        return random.nextInt(4);
-    }
+    Random random = new Random();
+    return random.nextInt(Card.SUITS.length);
+}
+
 }
